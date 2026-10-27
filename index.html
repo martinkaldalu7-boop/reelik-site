@@ -387,7 +387,7 @@ h3{font-weight:800;font-size:var(--fs-h3);line-height:1.05}
         <div class="frame">
           <p class="sticker" data-i18n="from">alates <b>79 €</b></p>
           <div class="phone">
-            <video id="clip" muted loop playsinline preload="metadata" poster="media/hero.jpg" width="540" height="960" aria-label="Näidisreklaami lõpp: rehvihotelli ladu">
+            <video id="clip" autoplay muted loop playsinline preload="auto" poster="media/hero.jpg" width="540" height="960" aria-label="Näidisreklaami lõpp: rehvihotelli ladu">
               <source src="media/hero.mp4" type="video/mp4">
             </video>
             <div class="bar" aria-hidden="true"><i id="bar"></i></div>
@@ -908,13 +908,16 @@ h3{font-weight:800;font-size:var(--fs-h3);line-height:1.05}
   });
 
   /* Hero clip playback */
-  let heroWant = !reduce, raf = 0;
+  let heroWant = true, raf = 0;
   const tick = () => {
     const d = clip.duration || 6.07;
     bar.style.transform = "scaleX(" + Math.min(1, clip.currentTime / d) + ")";
     raf = requestAnimationFrame(tick);
   };
-  const heroPlay = () => { const p = clip.play(); if (p && p.catch) p.catch(() => { heroWant = false; heroUI(); }); };
+  const heroPlay = () => { const p = clip.play(); if (p && p.catch) p.catch(() => { heroUI(); }); };
+  /* Some browsers block autoplay until the first interaction; retry then */
+  const heroKick = e => { if (heroWant && clip.paused && !(e.target && e.target.closest && e.target.closest("#" + hbtn.id))) heroPlay(); };
+  ["pointerdown", "touchstart", "keydown", "scroll"].forEach(ev => window.addEventListener(ev, heroKick, { once: true, passive: true }));
   clip.addEventListener("play", () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(tick); heroUI(); });
   clip.addEventListener("pause", () => { cancelAnimationFrame(raf); heroUI(); });
   hbtn.addEventListener("click", () => {
