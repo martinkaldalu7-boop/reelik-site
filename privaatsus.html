@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="et">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Reelik privaatsus</title>
+<meta name="description" content="Kuidas Reelik kasutab ja hoiab isikuandmeid.">
+<link rel="canonical" href="https://reelik.ee/privaatsus.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2315130F'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%23F23B2C'/%3E%3C/svg%3E">
+<style>
+@font-face{font-family:"Sofia Sans Extra Condensed";font-style:normal;font-display:swap;font-weight:1 1000;src:url(fonts/sofia-sans-extra-condensed.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Sofia Sans";font-style:normal;font-display:swap;font-weight:1 1000;src:url(fonts/sofia-sans.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Martian Mono";font-style:normal;font-display:swap;font-weight:100 800;src:url(fonts/martian-mono.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+/* Layout: one readable column under the same night bar as the main page, Estonian first and the English version below it. */
+:root{
+  --snow:#F3F2EE;
+  --ink:#15130F;
+  --ink-2:#57524A;
+  --line:#D3D0C8;
+  --night:#15130F;
+  --on-night:#F3F2EE;
+  --on-night-2:#A9A398;
+  --cap:#D42A20;
+  --on-cap:#FFFFFF;
+  --cap-d:#FF4436;
+  --rec:#F23B2C;
+  --focus:#15130F;
+  --f-display:"Sofia Sans Extra Condensed","Arial Narrow","Roboto Condensed",system-ui,sans-serif;
+  --f-body:"Sofia Sans",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;padding-bottom:env(safe-area-inset-bottom,0px);background:var(--snow);color:var(--ink);font-family:var(--f-body);font-size:1.0625rem;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-underline-offset:.2em}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:4px}
+.wrap{max-width:760px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.top{background:var(--night);color:var(--on-night);padding-top:env(safe-area-inset-top,0px)}
+.top :focus-visible{outline-color:var(--cap-d)}
+.top-in{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:62px}
+.logo{font-family:var(--f-display);font-weight:850;font-size:1.95rem;line-height:1;text-decoration:none;display:inline-flex;align-items:flex-start;gap:.06em;letter-spacing:-.01em}
+.rec{width:.28em;height:.28em;border-radius:50%;background:var(--rec);margin-top:.14em;flex:none}
+.jump{font-weight:600;font-size:.95rem;color:var(--on-night-2);text-decoration:none}
+.jump:hover{color:var(--on-night)}
+article{padding-block:clamp(44px,7vw,84px);display:grid;gap:14px}
+article + article{border-top:2px solid var(--line)}
+h1,h2{font-family:var(--f-display);margin:0;text-wrap:balance}
+h1{font-weight:900;font-size:clamp(3rem,6vw + 1rem,4.5rem);line-height:.94;text-transform:uppercase;letter-spacing:-.004em}
+h2{font-weight:800;font-size:1.65rem;line-height:1.1;margin-top:20px}
+/* Caption box. The display face has a 1.2em content area (0.9 up, 0.3 down); the band keeps 0.86em above the baseline and 0.14em below. */
+.hl{background:linear-gradient(transparent 3.4%,var(--cap) 3.4%,var(--cap) 86.6%,transparent 86.6%);color:var(--on-cap);padding:0 .1em}
+p,ul{margin:0;max-width:65ch}
+ul{padding-left:1.2em;display:grid;gap:8px}
+.date{font-size:.95rem;color:var(--ink-2)}
+.lead{font-size:1.2rem;color:var(--ink-2)}
+.foot{border-top:2px solid var(--line);padding-block:24px;font-size:.95rem;color:var(--ink-2)}
+.foot-in{display:flex;flex-wrap:wrap;gap:8px 24px}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="logo" href="./" aria-label="Reelik avaleht">reelik<span class="rec" aria-hidden="true"></span></a>
+    <a class="jump" href="#en" lang="en">English version ↓</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <article id="et" lang="et">
+    <h1><span class="hl">Privaatsus</span></h1>
+    <p class="date">Viimati uuendatud 14.10.2026</p>
+    <p class="lead">Reelik teeb ettevõtetele lühikesi reklaamvideoid. Siin on kirjas, milliseid andmeid ma kasutan, miks ja kui kaua neid hoian.</p>
+
+    <h2>Kes vastutab</h2>
+    <p>Martin Kaldalu, Reelik. E-post: martin@reelik.ee.</p>
+
+    <h2>Milliseid andmeid kasutan</h2>
+    <ul>
+      <li>Kui kirjutan teie ettevõttele esimesena: ettevõtte nimi, avalik e-posti aadress ja telefon, koduleht ja sotsiaalmeedia kontod. Leian need avalikest allikatest, näiteks ettevõtte kodulehelt, Google Mapsist või äriregistrist.</li>
+      <li>Kui teete minuga koostööd: meie kirjavahetus, arve andmed ning fotod ja muud materjalid, mille videote jaoks saadate.</li>
+    </ul>
+
+    <h2>Miks ja millisel alusel</h2>
+    <p>Pakun ettevõtetele videoteenust ja teen tellitud videoid. Esimene kiri põhineb minu õigustatud huvil oma teenust pakkuda (isikuandmete kaitse üldmääruse artikli 6 lõike 1 punkt f). Tellimuse puhul on aluseks meie leping.</p>
+
+    <h2>Kellega andmeid jagan</h2>
+    <p>Ma ei müü andmeid ega anna neid kellelegi reklaami jaoks. Kasutan teenusepakkujaid, mille kaudu andmed liiguvad: e-post (Zoho Mail, Euroopa andmekeskus), tabelid kontaktide haldamiseks ja tehisintellekti tööriistad videote tegemiseks. Mõned neist võivad andmeid töödelda väljaspool Euroopa Liitu.</p>
+
+    <h2>Kui kaua hoian</h2>
+    <p>Kontaktandmeid hoian kuni 12 kuud pärast viimast suhtlust. Kui palute mul mitte enam kirjutada, jätan alles ainult teie e-posti aadressi, et ma teile kogemata uuesti ei kirjutaks. Arveid hoian 7 aastat, nagu nõuab raamatupidamise seadus.</p>
+
+    <h2>Teie õigused</h2>
+    <p>Teil on õigus tutvuda oma andmetega, paluda neid parandada või kustutada, piirata nende kasutamist ja esitada vastuväide. Kõige lihtsam on vastata minu kirjale „ei“ või kirjutada aadressile martin@reelik.ee. Kaebuse saate esitada Andmekaitse Inspektsioonile (<a href="https://www.aki.ee" rel="noopener">www.aki.ee</a>).</p>
+
+    <h2>See veebileht</h2>
+    <p>Leht ei kasuta küpsiseid ega analüütikat. Keelevalik jäetakse meelde teie enda brauseris. Veebimajutuse pakkuja võib tehnilistes logides lühiajaliselt hoida külastaja IP-aadressi.</p>
+  </article>
+
+  <article id="en" lang="en">
+    <h1><span class="hl">Privacy</span></h1>
+    <p class="date">Last updated 14.10.2026</p>
+    <p class="lead">Reelik makes short promo videos for businesses. This page explains what data I use, why, and how long I keep it.</p>
+
+    <h2>Who is responsible</h2>
+    <p>Martin Kaldalu, Reelik. Email: martin@reelik.ee.</p>
+
+    <h2>What data I use</h2>
+    <ul>
+      <li>When I contact your business first: the company name, public email address and phone number, website and social media accounts. I find these in public sources, such as the company website, Google Maps or the Estonian business register.</li>
+      <li>When you work with me: our correspondence, invoicing details, and the photos and other materials you send for the videos.</li>
+    </ul>
+
+    <h2>Why and on what basis</h2>
+    <p>I offer a video service to businesses and make the videos they order. The first email is based on my legitimate interest in offering my service (Article 6(1)(f) of the General Data Protection Regulation). For orders, the basis is our contract.</p>
+
+    <h2>Who I share data with</h2>
+    <p>I do not sell data or pass it on to anyone for advertising. I use service providers that the data passes through: email (Zoho Mail, EU data centre), spreadsheets for managing contacts, and AI tools for making the videos. Some of them may process data outside the European Union.</p>
+
+    <h2>How long I keep data</h2>
+    <p>I keep contact details for up to 12 months after our last contact. If you ask me to stop writing, I keep only your email address so that I don’t write to you again by mistake. I keep invoices for 7 years, as the Estonian Accounting Act requires.</p>
+
+    <h2>Your rights</h2>
+    <p>You have the right to see your data, ask me to correct or delete it, restrict its use and object to it. The easiest way is to reply “no” to my email or write to martin@reelik.ee. You can file a complaint with the Estonian Data Protection Inspectorate (<a href="https://www.aki.ee" rel="noopener">www.aki.ee</a>).</p>
+
+    <h2>This website</h2>
+    <p>The site uses no cookies or analytics. Your language choice is remembered in your own browser. The hosting provider may briefly keep visitors’ IP addresses in technical logs.</p>
+  </article>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <span>© 2026 Reelik</span>
+    <a href="./">reelik.ee</a>
+    <span>martin@reelik.ee</span>
+  </div>
+</footer>
+</body>
+</html>

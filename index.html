@@ -1,0 +1,1026 @@
+<!doctype html>
+<html lang="et">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Reelik · Reklaamvideod ettevõtetele</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Lühikesed reklaamvideod ettevõtetele eesti ja inglise keeles. Valmis 3 tööpäevaga, alates 79 €.">
+<link rel="canonical" href="https://reelik.ee/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Reelik">
+<meta property="og:locale" content="et_EE">
+<meta property="og:url" content="https://reelik.ee/">
+<meta property="og:title" content="Reelik · Reklaamvideod ettevõtetele, alates 79 €">
+<meta property="og:description" content="Lühikesed vertikaalsed reklaamvideod Instagrami, TikToki ja Facebooki jaoks. Eesti ja inglise keeles, valmis 3 tööpäevaga, alates 79 €.">
+<meta property="og:image" content="https://reelik.ee/media/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="fonts/sofia-sans-extra-condensed.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2315130F'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%23F23B2C'/%3E%3C/svg%3E">
+<style>
+@font-face{font-family:"Sofia Sans Extra Condensed";font-style:normal;font-display:swap;font-weight:1 1000;src:url(fonts/sofia-sans-extra-condensed.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Sofia Sans";font-style:normal;font-display:swap;font-weight:1 1000;src:url(fonts/sofia-sans.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Martian Mono";font-style:normal;font-display:swap;font-weight:100 800;src:url(fonts/martian-mono.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+/* Layout: the page reads like the ad itself. A record-light red hero between two night bars, then the real sample ad laid out on an edit timeline (picture, text, sound), then the work, the prices and the contact. */
+:root{
+  --snow:#F3F2EE;
+  --snow-2:#E8E6E1;
+  --card:#FCFBF9;
+  --ink:#15130F;
+  --ink-2:#57524A;
+  --line:#D3D0C8;
+  --night:#15130F;
+  --on-night:#F3F2EE;
+  --on-night-2:#A9A398;
+  --night-line:#36322C;
+  --hero:#D42A20;
+  --on-hero:#FFFFFF;
+  --on-hero-2:#FFF1EE;
+  --box:#15130F;
+  --on-box:#FFFFFF;
+  --cap:#D42A20;
+  --on-cap:#FFFFFF;
+  --cap-d:#FF4436;
+  --rec:#F23B2C;
+  --on-rec:#FFFFFF;
+  --sticker:#FFFFFF;
+  --on-sticker:#15130F;
+  --btn:#15130F;
+  --on-btn:#FFFFFF;
+  --reel:#15130F;
+  --on-reel:#F3F2EE;
+  --on-reel-2:#A9A398;
+  --reel-seg:rgba(243,242,238,.5);
+  --reel-cta:rgba(243,242,238,.12);
+  --focus:#15130F;
+  --bezel:#0A0908;
+  --shadow:rgba(21,19,15,.34);
+  --video-bg:#000000;
+  --on-video:#FFFFFF;
+  --video-track:rgba(255,255,255,.35);
+  --video-shade:rgba(0,0,0,.6);
+  --glass:rgba(10,9,8,.45);
+  --ed:#1A1815;
+  --ed-2:#24211D;
+  --ed-3:#302C27;
+  --ed-fg:#EFECE6;
+  --ed-fg-2:#A29C92;
+  --ed-line:#3A362F;
+  --wave-a:#FF4436;
+  --wave-b:#4A453E;
+  --tk-fg:#D42A20;
+  --tk-band:transparent;
+  --f-display:"Sofia Sans Extra Condensed","Arial Narrow","Roboto Condensed",system-ui,sans-serif;
+  --f-body:"Sofia Sans",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --f-mono:"Martian Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --fs-hero:clamp(3.4rem,6vw + 1rem,7.25rem);
+  --fs-big:clamp(3.1rem,6vw + .9rem,7.25rem);
+  --fs-h2:clamp(2.6rem,3.8vw + 1.1rem,5.25rem);
+  --fs-h3:clamp(1.45rem,.5vw + 1.3rem,1.75rem);
+  --fs-lede:clamp(1.125rem,.35vw + 1.05rem,1.3rem);
+  --fs-body:1.0625rem;
+  color-scheme:light;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:84px}
+body{margin:0;background:var(--snow);color:var(--ink);font-family:var(--f-body);font-size:var(--fs-body);line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:11;background:var(--night)}
+img,video,canvas{display:block;max-width:100%}
+a{color:inherit}
+p,ul,ol,figure,h1,h2,h3{margin:0}
+[hidden]{display:none!important}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance}
+h1,h2{font-weight:900;text-transform:uppercase;line-height:.94;letter-spacing:-.004em}
+h3{font-weight:800;font-size:var(--fs-h3);line-height:1.05}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1200px;margin-inline:auto;padding-left:max(clamp(16px,4vw,44px),env(safe-area-inset-left,0px));padding-right:max(clamp(16px,4vw,44px),env(safe-area-inset-right,0px))}
+/* Caption box. The display face has a 1.2em content area (0.9 up, 0.3 down); the band keeps 0.86em above the baseline for Õ Ä Ö Ü and 0.14em below. */
+.hl,.box{--bx:var(--cap);background:linear-gradient(transparent 3.4%,var(--bx) 3.4%,var(--bx) 86.6%,transparent 86.6%);padding:0 .1em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.hl{color:var(--on-cap)}
+.nw{white-space:nowrap}
+.skip{position:absolute;left:-9999px;top:0}
+.skip:focus{left:max(16px,env(safe-area-inset-left,0px));top:calc(env(safe-area-inset-top,0px) + 12px);z-index:20;background:var(--cap);color:var(--on-cap);padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:700}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;min-height:52px;padding:0 1.4em;border-radius:10px;background:var(--btn);color:var(--on-btn);font-family:var(--f-body);font-weight:700;font-size:1.0625rem;line-height:1;text-decoration:none;border:0;cursor:pointer;transition:transform .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.link{font-weight:700;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:.3em}
+.ico{width:16px;height:16px;flex:none}
+
+/* Header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--night);color:var(--on-night)}
+.top :focus-visible{outline-color:var(--cap-d)}
+.top-in{display:flex;align-items:center;gap:20px;min-height:62px}
+.logo{font-family:var(--f-display);font-weight:850;font-size:1.95rem;line-height:1;text-decoration:none;display:inline-flex;align-items:flex-start;gap:.06em;letter-spacing:-.01em;margin-right:auto}
+.rec{width:.28em;height:.28em;border-radius:50%;background:var(--rec);margin-top:.14em;flex:none}
+.nav{display:none;gap:26px}
+.nav a{text-decoration:none;font-weight:600;font-size:.98rem;color:var(--on-night-2)}
+.nav a:hover{color:var(--on-night)}
+@media (min-width:860px){.nav{display:flex}}
+.top-r{display:flex;align-items:center;gap:12px}
+.lang{display:inline-flex;gap:2px;padding:2px;border:1.5px solid var(--night-line);border-radius:9px}
+.lang button{appearance:none;border:0;background:transparent;color:var(--on-night-2);font-family:var(--f-mono);font-size:.7rem;font-weight:600;letter-spacing:.06em;min-height:32px;min-width:40px;padding:0 8px;border-radius:6px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--on-night);color:var(--night)}
+.top-cta{display:inline-flex;align-items:center;min-height:38px;padding:0 14px;border-radius:8px;background:var(--cap);color:var(--on-cap);font-weight:700;font-size:.95rem;text-decoration:none;white-space:nowrap}
+
+/* Hero */
+.hero{background:var(--hero);color:var(--on-hero);padding-block:clamp(44px,6vw,88px) clamp(64px,7vw,104px);overflow:hidden}
+.hero-in{display:grid;gap:clamp(56px,7vw,72px);align-items:center}
+@media (min-width:960px){.hero-in{grid-template-columns:minmax(0,1fr) auto;column-gap:clamp(56px,7vw,112px)}}
+.hero-text{display:grid;gap:clamp(22px,2.4vw,30px);min-width:0}
+.hero h1{font-size:var(--fs-hero)}
+.hero h1 .l1{display:block}
+.box{--bx:var(--box);color:var(--on-box)}
+.lede{font-size:var(--fs-lede);color:var(--on-hero-2);max-width:31em;line-height:1.5}
+.cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:16px 28px}
+
+.shot{justify-self:center;width:min(296px,72vw);display:grid;gap:22px;justify-items:center}
+.frame{position:relative;width:100%}
+.phone{position:relative;width:100%;max-width:100%;aspect-ratio:9/16;border:9px solid var(--bezel);border-radius:38px;background:var(--bezel);overflow:hidden;isolation:isolate;box-shadow:0 44px 80px -44px var(--shadow)}
+.phone video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.bar{position:absolute;top:12px;left:12px;right:12px;height:3px;border-radius:2px;background:var(--video-track);overflow:hidden;z-index:2}
+.bar i{display:block;height:100%;background:var(--on-video);transform:scaleX(0);transform-origin:left center}
+.hp{position:absolute;z-index:3;top:24px;right:10px;width:36px;height:36px;padding:0;border:0;border-radius:50%;background:var(--glass);color:var(--on-video);display:grid;place-items:center;cursor:pointer}
+.hp:focus-visible,.monitor:focus-visible{outline-color:var(--cap-d)}
+.sticker{position:absolute;z-index:4;top:-34px;left:-42px;width:118px;height:118px;border-radius:50%;background:var(--sticker);color:var(--on-sticker);display:grid;place-content:center;justify-items:center;text-align:center;transform:rotate(-12deg);font-family:var(--f-display);font-weight:800;font-size:1.05rem;line-height:.95;letter-spacing:.06em;text-transform:uppercase;box-shadow:0 14px 26px -12px var(--shadow)}
+.sticker b{display:block;font-weight:900;font-size:2.7rem;letter-spacing:-.01em;line-height:.9}
+@media (max-width:480px){.sticker{left:-26px;top:-30px;width:104px;height:104px}.sticker b{font-size:2.35rem}}
+.shot figcaption{font-size:.92rem;font-weight:600;color:var(--on-hero-2);text-align:center}
+
+/* Facts */
+.facts{background:var(--night);color:var(--on-night)}
+.facts ul{list-style:none;margin:0;padding-block:18px;display:flex;flex-wrap:wrap;gap:10px 30px}
+@media (min-width:1080px){.facts ul{justify-content:space-between}}
+.facts li{display:flex;align-items:center;gap:10px;font-family:var(--f-display);font-weight:800;font-size:1.2rem;line-height:1.1;letter-spacing:.03em;text-transform:uppercase}
+.facts li::before{content:"";width:8px;height:8px;background:var(--cap-d);flex:none}
+
+/* AI slop */
+.slop{padding-block:clamp(76px,10vw,144px)}
+.slop-in{display:grid;gap:clamp(26px,3vw,40px)}
+.slop h2{font-size:var(--fs-big)}
+.slop h2 > span{display:block}
+.slop-p{font-size:var(--fs-lede);color:var(--ink-2);max-width:30em}
+@media (min-width:900px){.slop-in{grid-template-columns:minmax(0,7fr) minmax(0,5fr);align-items:end;column-gap:clamp(32px,4vw,64px)}.slop-p{padding-bottom:.3em}}
+
+/* Sample ad on an edit timeline */
+.ana{background:var(--snow-2);padding-block:clamp(64px,8vw,120px)}
+.sec-head{display:grid;gap:16px;max-width:46em;margin-bottom:clamp(28px,4vw,48px)}
+.sec-head h2{font-size:var(--fs-h2)}
+.sec-head p{font-size:var(--fs-lede);color:var(--ink-2)}
+.editor{background:var(--ed);color:var(--ed-fg);border-radius:18px;padding:clamp(14px,2.2vw,28px);display:grid;gap:clamp(18px,2vw,26px);grid-template-columns:minmax(0,1fr);grid-template-areas:"mon" "tl" "beats";box-shadow:0 40px 80px -50px var(--shadow)}
+.editor :focus-visible{outline-color:var(--cap-d)}
+@media (min-width:960px){.editor{grid-template-columns:300px minmax(0,1fr);grid-template-areas:"mon beats" "tl tl";column-gap:clamp(24px,3vw,40px)}}
+.mon{grid-area:mon;display:grid;gap:12px;justify-self:center;width:min(300px,100%);align-content:start}
+.monitor{position:relative;width:100%;max-width:100%;aspect-ratio:9/16;border-radius:12px;overflow:hidden;background:var(--video-bg);cursor:pointer}
+.monitor video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.m-bar{position:absolute;top:10px;left:10px;right:10px;height:3px;border-radius:2px;background:var(--video-track);overflow:hidden;z-index:3}
+.m-bar i{display:block;height:100%;background:var(--on-video);transform:scaleX(0);transform-origin:left center}
+.m-ctrl{display:flex;align-items:center;gap:12px}
+.m-btn{appearance:none;display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:0 12px;border:1.5px solid var(--ed-line);border-radius:8px;background:var(--ed-2);color:var(--ed-fg);font-family:var(--f-body);font-weight:700;font-size:.9rem;line-height:1;cursor:pointer}
+.m-btn:hover{background:var(--ed-3)}
+.i-pause,.playing .i-play{display:none}
+.playing .i-pause{display:block}
+.i-on,.unmuted .i-off{display:none}
+.unmuted .i-on{display:block}
+.m-tc{margin-right:auto;font-family:var(--f-mono);font-size:.72rem;line-height:1;color:var(--ed-fg-2);font-variant-numeric:tabular-nums;white-space:nowrap}
+.m-ico{width:40px;padding:0;justify-content:center}
+.m-tc b{font-weight:600;color:var(--ed-fg)}
+.noplay .m-btn{display:none}
+
+.tl{grid-area:tl;display:grid;grid-template-columns:48px minmax(0,1fr);grid-template-rows:20px 58px 26px 40px;row-gap:6px;column-gap:10px;touch-action:pan-y;-webkit-user-select:none;user-select:none;cursor:pointer;border-radius:6px}
+.tl-l{grid-column:1;align-self:center;font-family:var(--f-mono);font-size:.6rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--ed-fg-2);overflow:hidden;text-overflow:ellipsis}
+.ruler{grid-column:2;grid-row:1;position:relative;border-bottom:1px solid var(--ed-line);background:repeating-linear-gradient(90deg,var(--ed-line) 0 1px,transparent 1px calc(100% / var(--dur))) left bottom/100% 6px no-repeat}
+.ruler span{position:absolute;top:0;left:calc(var(--a) / var(--dur) * 100%);transform:translateX(-50%);font-family:var(--f-mono);font-size:.6rem;line-height:1;color:var(--ed-fg-2);font-variant-numeric:tabular-nums}
+.ruler span:first-child{transform:none}
+@media (max-width:699px){.ruler span:nth-child(even){display:none}}
+.trk{grid-column:2;position:relative;border-radius:6px;background:var(--ed-2);overflow:hidden}
+.r-pic{grid-row:2}.r-txt{grid-row:3}.r-snd{grid-row:4}
+.clip{position:absolute;top:0;bottom:0;left:calc(var(--a) / var(--dur) * 100% + 1px);width:calc((var(--b) - var(--a)) / var(--dur) * 100% - 2px);border-radius:5px;background-color:var(--ed-3);background-repeat:repeat-x;background-size:auto 100%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.55);overflow:hidden}
+.clip span{position:absolute;left:6px;bottom:5px;font-family:var(--f-display);font-weight:800;font-size:.8rem;line-height:1;letter-spacing:.05em;text-transform:uppercase;color:#FFFFFF;text-shadow:0 1px 6px #000000;white-space:nowrap}
+.clip.on{box-shadow:inset 0 0 0 2px var(--cap-d)}
+.c1{background-image:url(data:image/jpeg;base64,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)}.c2{background-image:url(data:image/jpeg;base64,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)}.c3{background-image:url(data:image/jpeg;base64,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)}.c4{background-image:url(data:image/jpeg;base64,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)}.c5{background-image:url(data:image/jpeg;base64,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)}
+.cue{position:absolute;top:3px;bottom:3px;left:calc(var(--a) / var(--dur) * 100%);width:calc((var(--b) - var(--a)) / var(--dur) * 100%);padding:0 6px;border-radius:4px;background:var(--ed-3);color:var(--ed-fg-2);font-size:.68rem;font-weight:600;line-height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cue.on{background:var(--cap);color:var(--on-cap)}
+.r-snd canvas{width:100%;height:100%}
+.tl-area{grid-column:2;grid-row:1/-1;position:relative;pointer-events:none}
+.ph{position:absolute;top:11px;bottom:0;left:0;width:2px;margin-left:-1px;background:var(--rec)}
+.ph::before{content:"";position:absolute;top:0;left:-5px;width:12px;height:12px;background:var(--rec);clip-path:polygon(0 0,100% 0,50% 100%)}
+@media (max-width:699px){.clip span{display:none}.cue{font-size:0;padding:0}}
+
+.beats{grid-area:beats;list-style:none;margin:0;padding:0;display:grid;gap:6px;align-content:start}
+@media (min-width:960px){.beats{grid-template-rows:repeat(5,minmax(0,1fr));align-content:stretch}}
+.beat{appearance:none;width:100%;height:100%;display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:16px;row-gap:4px;align-content:center;text-align:left;padding:12px 16px 12px 13px;border:0;border-left:3px solid transparent;border-radius:8px;background:var(--ed-2);color:var(--ed-fg);font:inherit;cursor:pointer}
+.beat:hover{background:var(--ed-3)}
+.beat.on{background:var(--ed-3);border-left-color:var(--cap-d)}
+.b-tc{grid-row:1/span 3;padding-top:5px;font-family:var(--f-mono);font-size:.7rem;line-height:1.5;color:var(--ed-fg-2);font-variant-numeric:tabular-nums;white-space:nowrap}
+.b-h{font-family:var(--f-display);font-weight:800;font-size:1.45rem;line-height:1;letter-spacing:.02em;text-transform:uppercase}
+.beat.on .b-h{color:var(--cap-d)}
+.b-l{font-weight:600;line-height:1.35}
+.b-s{font-size:.9rem;color:var(--ed-fg-2)}
+
+/* The work */
+.craft{padding-block:clamp(76px,9vw,132px)}
+.craft-in{display:grid;gap:clamp(36px,4vw,56px)}
+.craft-head{display:grid;gap:16px;align-content:start;align-self:start}
+.craft-head h2{font-size:var(--fs-h2)}
+.craft-head p{font-size:var(--fs-lede);color:var(--ink-2);max-width:24em}
+@media (min-width:900px){.craft-in{grid-template-columns:minmax(0,5fr) minmax(0,7fr)}.craft-head{position:sticky;top:110px}}
+.takes{list-style:none;margin:0;padding:0;display:grid;gap:clamp(30px,3.4vw,46px)}
+.takes li{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:clamp(18px,2.4vw,30px);row-gap:8px;align-items:baseline}
+.tk-n{grid-row:1/span 2;font-family:var(--f-display);font-weight:900;font-size:clamp(2.6rem,3vw + 1.4rem,4rem);line-height:.8;font-variant-numeric:tabular-nums;padding:0 .04em;color:var(--tk-fg);background:linear-gradient(transparent 58%,var(--tk-band) 58%,var(--tk-band) 94%,transparent 94%)}
+.takes p{color:var(--ink-2);max-width:34em}
+
+/* How it works */
+.how{background:var(--snow-2);padding-block:clamp(64px,8vw,112px)}
+.how h2{font-size:var(--fs-h2);margin-bottom:clamp(28px,4vw,48px)}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:34px}
+@media (min-width:880px){.steps{grid-template-columns:minmax(0,1fr) minmax(0,1.45fr) minmax(0,1fr);gap:6px}}
+.step{display:grid;gap:14px;align-content:start;min-width:0}
+.lane{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:48px;padding:0 16px;border-radius:8px;background:var(--card);color:var(--ink);font-family:var(--f-display);font-weight:800;font-size:1.15rem;line-height:1;letter-spacing:.06em;text-transform:uppercase}
+.lane b{font-weight:900;font-size:1.6rem;letter-spacing:0}
+.me .lane{background:var(--night);color:var(--cap-d)}
+.step p{color:var(--ink-2);max-width:30em}
+@media (min-width:880px){.step h3,.step p{padding-right:26px}}
+
+/* Prices */
+.prices{padding-block:clamp(64px,8vw,120px)}
+.prices h2{font-size:var(--fs-h2)}
+.plans{display:grid;gap:16px;margin-top:clamp(28px,4vw,48px)}
+.plan{background:var(--reel);color:var(--on-reel);border-radius:22px;padding:16px 20px 20px;display:grid;gap:14px;align-content:start;min-width:0}
+@media (min-width:900px){
+  .plans{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(6,auto);column-gap:16px;row-gap:14px}
+  .plan{grid-row:span 6;grid-template-rows:subgrid}
+}
+.segs{display:flex;gap:3px}
+.segs i{flex:1;height:3px;border-radius:2px;background:var(--reel-seg)}
+.plan h3{font-size:1.6rem;margin-top:12px}
+.price{font-family:var(--f-display);font-weight:900;font-size:clamp(3.4rem,3vw + 2rem,4.6rem);line-height:.85;font-variant-numeric:tabular-nums;display:flex;flex-wrap:wrap;align-items:baseline;gap:.1em .14em}
+.price small{font-family:var(--f-body);font-weight:600;font-size:1rem;color:var(--on-reel-2);letter-spacing:0}
+.per{font-size:.95rem;font-weight:600;color:var(--on-reel-2)}
+.plan ul{list-style:none;margin:0;padding:0;display:grid;gap:9px;align-content:start}
+.plan li{position:relative;padding-left:1.25em}
+.plan li::before{content:"";position:absolute;left:0;top:.55em;width:.45em;height:.45em;background:var(--cap-d)}
+.plan-cta{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:48px;margin-top:8px;padding:0 16px;border-radius:10px;background:var(--reel-cta);color:var(--on-reel);font-weight:700;text-decoration:none;align-self:end}
+.plan-cta:hover{background:var(--cap);color:var(--on-cap)}
+.plan :focus-visible{outline-color:var(--cap-d)}
+.incl{margin-top:clamp(44px,5vw,68px);display:grid;gap:24px}
+.spec{list-style:none;margin:0;padding:0;display:grid;gap:20px 44px}
+@media (min-width:700px){.spec{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:1040px){.spec{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.spec li{position:relative;display:grid;gap:4px;align-content:start;padding-left:22px;min-width:0}
+.spec li::before{content:"";position:absolute;left:0;top:.42em;width:10px;height:10px;background:var(--ink)}
+.spec b{font-family:var(--f-display);font-weight:800;font-size:1.3rem;line-height:1.1}
+.spec span{color:var(--ink-2)}
+.pr-note{margin-top:30px;color:var(--ink-2)}
+.pr-note a,.faq-note a{color:var(--ink);font-weight:700;text-decoration-thickness:2px;text-underline-offset:.25em}
+
+/* Questions */
+.faq-band{background:var(--snow-2);padding-block:clamp(64px,8vw,112px)}
+.faq-in{display:grid;gap:clamp(24px,3vw,40px)}
+@media (min-width:900px){.faq-in{grid-template-columns:minmax(0,4fr) minmax(0,8fr)}}
+.faq-band h2{font-size:var(--fs-h2)}
+.faq details{border-top:2px solid var(--line)}
+.faq details:last-of-type{border-bottom:2px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:20px 0;font-family:var(--f-display);font-weight:800;font-size:1.45rem;line-height:1.15}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:none;width:16px;height:16px;background:linear-gradient(var(--ink),var(--ink)) center/100% 2.5px no-repeat,linear-gradient(var(--ink),var(--ink)) center/2.5px 100% no-repeat}
+.faq details[open] summary::after{background:linear-gradient(var(--ink),var(--ink)) center/100% 2.5px no-repeat}
+.faq details p{padding:0 0 22px;color:var(--ink-2);max-width:60ch}
+.faq-note{margin-top:24px;color:var(--ink-2)}
+
+/* Contact */
+.contact{background:var(--night);color:var(--on-night);padding-block:clamp(76px,9vw,132px)}
+.contact :focus-visible{outline-color:var(--cap-d)}
+.ct-in{display:grid;gap:22px;justify-items:start}
+.contact h2{font-size:var(--fs-h2);max-width:12em}
+.ct-p{font-size:var(--fs-lede);color:var(--on-night-2);max-width:32em}
+.addr{margin-top:10px;font-family:var(--f-display);font-weight:850;font-size:clamp(2.5rem,7vw + .5rem,6.75rem);line-height:1;letter-spacing:-.005em;color:var(--cap-d);overflow-wrap:anywhere;user-select:all;-webkit-user-select:all}
+.ct-actions{display:flex;flex-wrap:wrap;gap:12px}
+.contact .btn{background:var(--cap);color:var(--on-cap)}
+.btn-ghost{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 1.3em;border-radius:10px;border:1.5px solid var(--night-line);background:transparent;color:var(--on-night);font-family:var(--f-body);font-size:1.0625rem;font-weight:700;cursor:pointer}
+.btn-ghost:hover{border-color:var(--on-night-2)}
+.toast{min-height:1.5em;font-size:.95rem;color:var(--on-night-2)}
+.tel{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;font-size:var(--fs-lede);color:var(--on-night-2)}
+.tel a{font-family:var(--f-display);font-weight:800;font-size:clamp(1.9rem,2.4vw + 1.1rem,2.9rem);line-height:1;letter-spacing:.005em;color:var(--on-night);text-decoration:none;white-space:nowrap}
+.tel a:hover{color:var(--cap-d)}
+.sign{font-size:.95rem;color:var(--on-night-2)}
+
+.foot{padding-block:26px}
+.foot-in{display:flex;flex-wrap:wrap;gap:8px 28px;font-size:.95rem;color:var(--ink-2)}
+.foot a{color:var(--ink-2);text-underline-offset:.2em}
+.foot a:hover{color:var(--ink)}
+
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .btn{transition:none}
+  .btn:hover{transform:none}
+}
+
+/* Motion, only when the head script sets .anim (motion allowed, IntersectionObserver present). The headline cuts in like
+   burned-in captions once the display face is ready (.go), the REC dot blinks four times and then holds, and the two caption
+   boxes wipe in from the left when their heading comes into view (.seen). Swapping language re-inserts the spans, so both replay. */
+@keyframes cut{from{opacity:0}to{opacity:1}}
+@keyframes rec-blink{50%{opacity:.15}}
+@keyframes wipe{from{background-size:0 100%}to{background-size:100% 100%}}
+.anim .hero h1 .w,.anim .hero h1 .box{opacity:0}
+.anim.go .hero h1 .w,.anim.go .hero h1 .box{opacity:1;animation:cut 1ms steps(1,end) .1s backwards}
+.anim.go .hero h1 .w + .w{animation-delay:.33s}
+.anim.go .hero h1 .box{animation-delay:.56s}
+.anim .top .rec{animation:rec-blink 1.2s steps(1,end) .4s 4}
+.anim #h-slop .hl,.anim #h-ct .hl{background-repeat:no-repeat;background-size:0 100%}
+.anim .seen .hl{animation:wipe .34s cubic-bezier(.3,0,.2,1) .08s forwards}
+</style>
+<script>
+/* Turns on the motion in the stylesheet. Runs before the body paints, so nothing is shown and then hidden. */
+(() => {
+  const d = document.documentElement;
+  if (!window.matchMedia || !matchMedia("(prefers-reduced-motion: no-preference)").matches || !("IntersectionObserver" in window)) return;
+  d.classList.add("anim");
+  let done = false;
+  const go = () => { if (!done) { done = true; d.classList.add("go"); } };
+  try { document.fonts.load('900 1em "Sofia Sans Extra Condensed"').then(go, go); } catch (e) { go(); }
+  setTimeout(go, 600);
+  document.addEventListener("DOMContentLoaded", () => {
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("seen"); io.unobserve(e.target); }
+    }), { threshold: 0.6 });
+    document.querySelectorAll("#h-slop, #h-ct").forEach(x => io.observe(x));
+  });
+})();
+</script>
+</head>
+<body>
+
+<a class="skip" href="#sisu" data-i18n="skip">Liigu sisu juurde</a>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="logo" href="#sisu" aria-label="Reelik">reelik<span class="rec" aria-hidden="true"></span></a>
+    <nav class="nav" aria-label="Menüü">
+      <a href="#naidis" data-i18n="nav_ad">Näidis</a>
+      <a href="#protsess" data-i18n="nav_craft">Protsess</a>
+      <a href="#hinnad" data-i18n="nav_prices">Hinnad</a>
+    </nav>
+    <div class="top-r">
+      <div class="lang" role="group" aria-label="Keel / Language">
+        <button type="button" id="lang-et" data-lang="et" aria-pressed="true">ET</button>
+        <button type="button" id="lang-en" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <a class="top-cta" href="#kontakt" data-i18n="nav_cta">Kirjutage</a>
+    </div>
+  </div>
+</header>
+
+<main id="sisu">
+  <section class="hero" aria-labelledby="h-hero">
+    <div class="wrap hero-in">
+      <div class="hero-text">
+        <h1 id="h-hero" data-i18n="h1"><span class="l1"><span class="w">Instagram</span> <span class="w">tahab videot,</span></span> <span class="box">töötajad mitte</span></h1>
+        <p class="lede" data-i18n="lede">Teen teie ettevõttele lühikese reklaamvideo ilma ühegi võttepäevata. Keegi ei pea kaamera ette minema ega leti tagant lahkuma: teie kirjutate paar lauset, mina teen ülejäänu.</p>
+        <div class="cta-row">
+          <a class="btn" href="#kontakt" data-i18n="cta_write">Kirjutage mulle</a>
+          <a class="link" href="#hinnad" data-i18n="cta_prices">Vaadake hindu</a>
+        </div>
+      </div>
+      <figure class="shot">
+        <div class="frame">
+          <p class="sticker" data-i18n="from">alates <b>79 €</b></p>
+          <div class="phone">
+            <video id="clip" muted loop playsinline preload="metadata" poster="media/hero.jpg" width="540" height="960" aria-label="Näidisreklaami lõpp: rehvihotelli ladu">
+              <source src="media/hero.mp4" type="video/mp4">
+            </video>
+            <div class="bar" aria-hidden="true"><i id="bar"></i></div>
+            <button type="button" class="hp" id="hero-btn" aria-label="Peata">
+              <svg class="ico i-play" viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 2.5v11l9-5.5z" fill="currentColor"/></svg>
+              <svg class="ico i-pause" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 2.5h3v11h-3zM9.5 2.5h3v11h-3z" fill="currentColor"/></svg>
+            </button>
+          </div>
+        </div>
+        <figcaption data-i18n="phone_label">Näidisreklaam väljamõeldud rehvihotellile</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="facts">
+    <ul class="wrap">
+      <li data-i18n="f1">Valmis 3 tööpäevaga</li>
+      <li data-i18n="f2">Hääl ja subtiitrid sees</li>
+      <li data-i18n="f3">Eesti ja inglise keeles</li>
+      <li data-i18n="f4">Instagram, TikTok, Facebook</li>
+      <li data-i18n="f5">Maksate pärast eelvaadet</li>
+    </ul>
+  </div>
+
+  <section class="slop" aria-labelledby="h-slop">
+    <div class="wrap slop-in">
+      <h2 id="h-slop"><span data-i18n="slop_h">Tüdinenud <span class="nw">AI-rämpsust?</span></span> <span data-i18n="slop_a"><span class="hl">Mina ka.</span></span></h2>
+      <p class="slop-p" data-i18n="slop_p">Ühesugused näod, kuus sõrme ja tekst, mida ei saa lugeda. Kaadrid teen küll AI-ga, aga iga kaader, mis näeb välja nagu AI, lendab prügikasti. Teie reklaami jõuab ainult see, mis näeb välja päris.</p>
+    </div>
+  </section>
+
+  <section class="ana" id="naidis" aria-labelledby="h-ana">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="h-ana" data-i18n="ana_h">Ühe reklaami ülesehitus</h2>
+        <p data-i18n="ana_p">Sama näidisreklaam osade kaupa. Valige ajateljelt, millist osa vaadata.</p>
+      </div>
+      <div class="editor" id="editor">
+        <div class="mon">
+          <div class="monitor" id="monitor">
+            <video id="ad" muted loop playsinline preload="none" poster="media/sample-ad.jpg" width="720" height="1280" aria-label="Näidisreklaam väljamõeldud rehvihotellile">
+              <source src="media/sample-ad.mp4" type="video/mp4">
+            </video>
+            <div class="m-bar" aria-hidden="true"><i id="m-bar"></i></div>
+          </div>
+          <div class="m-ctrl">
+            <button type="button" class="m-btn" id="ad-play">
+              <svg class="ico i-play" viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 2.5v11l9-5.5z" fill="currentColor"/></svg>
+              <svg class="ico i-pause" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 2.5h3v11h-3zM9.5 2.5h3v11h-3z" fill="currentColor"/></svg>
+              <span id="ad-play-t">Mängi</span>
+            </button>
+            <p class="m-tc" aria-hidden="true"><b id="tc-now">00:00</b> / 00:27</p>
+            <button type="button" class="m-btn m-ico" id="ad-snd" aria-label="Heli sisse" title="Heli sisse">
+              <svg class="ico i-off" viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 6h3l4-3.5v11l-4-3.5h-3z" fill="currentColor"/><path d="M11 6l4 4M15 6l-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              <svg class="ico i-on" viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 6h3l4-3.5v11l-4-3.5h-3z" fill="currentColor"/><path d="M11 5.5a3.5 3.5 0 0 1 0 5M13 3.5a6.3 6.3 0 0 1 0 9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="tl" id="tl" role="slider" tabindex="0" aria-label="Ajatelg" aria-valuemin="0" aria-valuemax="27.65" aria-valuenow="0" aria-valuetext="00:00" style="--dur:27.65">
+          <div class="ruler" aria-hidden="true"><span style="--a:0">00:00</span><span style="--a:5">00:05</span><span style="--a:10">00:10</span><span style="--a:15">00:15</span><span style="--a:20">00:20</span><span style="--a:25">00:25</span></div>
+          <span class="tl-l" style="grid-row:2" aria-hidden="true" data-i18n="tr_pic">Pilt</span>
+          <div class="trk r-pic" aria-hidden="true">
+            <div class="clip c1" style="--a:0;--b:5.53"><span></span></div>
+            <div class="clip c2" style="--a:5.53;--b:12.83"><span></span></div>
+            <div class="clip c3" style="--a:12.83;--b:19.2"><span></span></div>
+            <div class="clip c4" style="--a:19.2;--b:25.37"><span></span></div>
+            <div class="clip c5" style="--a:25.37;--b:27.65"><span></span></div>
+          </div>
+          <span class="tl-l" style="grid-row:3" aria-hidden="true" data-i18n="tr_txt">Tekst</span>
+          <div class="trk r-txt" aria-hidden="true">
+            <span class="cue" style="--a:0.14;--b:4.97"></span>
+            <span class="cue" style="--a:5.52;--b:8.72"></span>
+            <span class="cue" style="--a:8.81;--b:11.87"></span>
+            <span class="cue" style="--a:12.7;--b:15.72"></span>
+            <span class="cue" style="--a:16.17;--b:17.47"></span>
+            <span class="cue" style="--a:18.17;--b:21.13"></span>
+            <span class="cue" style="--a:21.13;--b:25.35"></span>
+            <span class="cue" style="--a:25.45;--b:27.65"></span>
+          </div>
+          <span class="tl-l" style="grid-row:4" aria-hidden="true" data-i18n="tr_snd">Heli</span>
+          <div class="trk r-snd" aria-hidden="true"><canvas id="wave"></canvas></div>
+          <div class="tl-area" aria-hidden="true"><i class="ph" id="ph"></i></div>
+        </div>
+
+        <ol class="beats">
+          <li><button type="button" class="beat" data-i="0">
+            <span class="b-tc">00:00–00:05</span>
+            <span class="b-h" data-i18n="b1_h">Konks</span>
+            <span class="b-l" data-i18n="b1_l">„Selle hooaja suurim sisustustrend: rehv!“</span>
+            <span class="b-s" data-i18n="b1_s">Kohvilaud on tegelikult rehv</span>
+          </button></li>
+          <li><button type="button" class="beat" data-i="1">
+            <span class="b-tc">00:05–00:12</span>
+            <span class="b-h" data-i18n="b2_h">Nali</span>
+            <span class="b-l" data-i18n="b2_l">„Pesuruumis rehvispaa. Magamistoas öökapp, mis lõhnab talve järele.“</span>
+            <span class="b-s" data-i18n="b2_s">Rehvid vannis ja voodi kõrval</span>
+          </button></li>
+          <li><button type="button" class="beat" data-i="2">
+            <span class="b-tc">00:12–00:19</span>
+            <span class="b-h" data-i18n="b3_h">Haripunkt</span>
+            <span class="b-l" data-i18n="b3_l">„Ja esikus multifunktsionaalne koeravoodi.“</span>
+            <span class="b-s" data-i18n="b3_s">Koer magab rehvis</span>
+          </button></li>
+          <li><button type="button" class="beat" data-i="3">
+            <span class="b-tc">00:19–00:25</span>
+            <span class="b-h" data-i18n="b4_h">Pööre</span>
+            <span class="b-l" data-i18n="b4_l">„Või… viid rehvid lihtsalt rehvihotelli.“</span>
+            <span class="b-s" data-i18n="b4_s">Rehvihotelli ladu</span>
+          </button></li>
+          <li><button type="button" class="beat" data-i="4">
+            <span class="b-tc">00:25–00:27</span>
+            <span class="b-h" data-i18n="b5_h">Lõpukaart</span>
+            <span class="b-l" data-i18n="b5_l">„Rehvihotell alates 39 € hooaeg“</span>
+            <span class="b-s" data-i18n="b5_s">Ettevõtte nimi, hind ja telefon</span>
+          </button></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="craft" id="protsess" aria-labelledby="h-craft">
+    <div class="wrap craft-in">
+      <div class="craft-head">
+        <h2 id="h-craft" data-i18n="craft_h">Üks video, palju katseid</h2>
+        <p data-i18n="craft_p">Nii näeb töö välja enne, kui video teieni jõuab.</p>
+      </div>
+      <ol class="takes">
+        <li><span class="tk-n" aria-hidden="true">01</span><h3 data-i18n="c1_h">Konks kõigepealt</h3><p data-i18n="c1_p">Kirjutan mitu erinevat algust ja jätan alles selle, mis paneb pöidla esimese kahe sekundiga seisma.</p></li>
+        <li><span class="tk-n" aria-hidden="true">02</span><h3 data-i18n="c2_h">Iga kaader mitme mudeliga</h3><p data-i18n="c2_p">Proovin sama kaadrit eri AI-mudelitega, sest üks oskab paremini valgust, teine liikumist.</p></li>
+        <li><span class="tk-n" aria-hidden="true">03</span><h3 data-i18n="c3_h">Enne pilt, siis liikumine</h3><p data-i18n="c3_p">Teen igast kaadrist mitu pilti ja valin parima. Alles siis hakkab see liikuma.</p></li>
+        <li><span class="tk-n" aria-hidden="true">04</span><h3 data-i18n="c4_h">Vead parandan ära</h3><p data-i18n="c4_p">Vaatan iga kaadri täissuuruses üle. Kui midagi on valesti, teen selle uuesti. Ei mingit „ehk keegi ei märka“.</p></li>
+        <li><span class="tk-n" aria-hidden="true">05</span><h3 data-i18n="c5_h">Lõpuks monteerimine</h3><p data-i18n="c5_p">Panen kaadrid kokku ning lisan hääle, muusika ja subtiitrid.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="how" aria-labelledby="h-how">
+    <div class="wrap">
+      <h2 id="h-how" data-i18n="how_h">Kuidas see käib</h2>
+      <ol class="steps">
+        <li class="step"><p class="lane"><b>1</b><span data-i18n="who_you">Teie</span></p><h3 data-i18n="s1_h">Kirjutage, mida müüte ja kellele</h3><p data-i18n="s1_p">Paarist lausest piisab. Tulen tagasi ideega: millega video esimese kahe sekundiga pilgu püüab ja mida see ütleb. Kui idee ei istu, öelge „ei, mitte nii“ ja mõtlen uue.</p></li>
+        <li class="step me"><p class="lane"><b>2</b><span data-i18n="who_me">Mina</span></p><h3 data-i18n="s2_h">Teen video</h3><p data-i18n="s2_p">Kaadrid, hääl, muusika ja subtiitrid. Teie saate vahepeal oma tööd teha.</p></li>
+        <li class="step"><p class="lane"><b>3</b><span data-i18n="who_you">Teie</span></p><h3 data-i18n="s3_h">Vaadake eelvaadet</h3><p data-i18n="s3_p">Kolme tööpäevaga saate vesimärgiga eelvaate. Üks parandusring on hinnas. Kui video on valmis, maksate ja saate selle ilma vesimärgita.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="prices" id="hinnad" aria-labelledby="h-pr">
+    <div class="wrap">
+      <h2 id="h-pr" data-i18n="pr_h">Hinnad</h2>
+      <div class="plans">
+        <article class="plan">
+          <div class="segs" aria-hidden="true"><i></i></div>
+          <h3 data-i18n="p1_h">Üks video</h3>
+          <p class="price">79 €</p>
+          <p class="per" data-i18n="p1_sub">sobib proovimiseks</p>
+          <ul>
+            <li data-i18n="p1_l1">1 video, 15–25 sekundit</li>
+            <li data-i18n="p1_l2">Eesti- ja ingliskeelne versioon</li>
+            <li data-i18n="p1_l3">Valmib 3 tööpäevaga</li>
+            <li data-i18n="p1_l4">1 parandusring</li>
+          </ul>
+          <a class="plan-cta" href="#kontakt"><span data-i18n="plan_cta">Kirjutage mulle</span><svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </article>
+        <article class="plan">
+          <div class="segs" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+          <h3 data-i18n="p2_h">Kuupakett</h3>
+          <p class="price">290 € <small data-i18n="per_month">kuus</small></p>
+          <p class="per" data-i18n="p2_sub">umbes 73 € video kohta</p>
+          <ul>
+            <li data-i18n="p2_l1">4 videot kuus, üks igal nädalal</li>
+            <li data-i18n="p2_l2">Eesti- ja ingliskeelsed versioonid</li>
+            <li data-i18n="p2_l3">Lihtne postitusplaan</li>
+            <li data-i18n="p2_l4">1 parandusring iga video kohta</li>
+          </ul>
+          <a class="plan-cta" href="#kontakt"><span data-i18n="plan_cta">Kirjutage mulle</span><svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </article>
+        <article class="plan">
+          <div class="segs" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <h3 data-i18n="p3_h">Kampaania</h3>
+          <p class="price">490 € <small data-i18n="per_month">kuus</small></p>
+          <p class="per" data-i18n="p3_sub">umbes 61 € video kohta</p>
+          <ul>
+            <li data-i18n="p3_l1">8 videot kuus</li>
+            <li data-i18n="p3_l2">2 lühemat versiooni Facebooki ja Instagrami reklaamideks</li>
+            <li data-i18n="p3_l3">Eesti- ja ingliskeelsed versioonid</li>
+            <li data-i18n="p3_l4">1 parandusring iga video kohta</li>
+          </ul>
+          <a class="plan-cta" href="#kontakt"><span data-i18n="plan_cta">Kirjutage mulle</span><svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </article>
+      </div>
+      <div class="incl">
+        <h3 data-i18n="inc_h">Igas videos on</h3>
+        <ul class="spec">
+          <li><b data-i18n="inc1_h">Idee ja stsenaarium</b><span data-i18n="inc1_p">Iga video on üles ehitatud ühe selge mõtte ümber, mille lepime enne kokku.</span></li>
+          <li><b data-i18n="inc2_h">Eesti ja inglise keel</b><span data-i18n="inc2_p">Ingliskeelne versioon tuleb tasuta kaasa, sest kõik ei kerige eesti keeles.</span></li>
+          <li><b data-i18n="inc3_h">Hääl ja subtiitrid</b><span data-i18n="inc3_p">Bussis ei pane keegi heli peale, seega on tekst kogu aeg ekraanil.</span></li>
+          <li><b data-i18n="inc4_h">Püstine formaat</b><span data-i18n="inc4_p">Video täidab kogu telefoniekraani ja on valmis Instagrami, Facebooki ja TikToki üles laadimiseks.</span></li>
+          <li><b data-i18n="inc5_h">Teie logo ja kontakt</b><span data-i18n="inc5_p">Lõpukaardil on teie nimi, logo ja see, kuidas teiega ühendust võtta.</span></li>
+          <li><b data-i18n="inc6_h">Muusika ja heliefektid</b><span data-i18n="inc6_p">Valin muusika ja efektid teie ettevõtte järgi.</span></li>
+        </ul>
+      </div>
+      <p class="pr-note" data-i18n="pr_note">Hindadele ei lisandu käibemaksu. Ei tea, mis sobib? <a href="#kontakt">Kirjutage ja ma soovitan.</a></p>
+    </div>
+  </section>
+
+  <section class="faq-band" aria-labelledby="h-faq">
+    <div class="wrap faq-in">
+      <h2 id="h-faq" data-i18n="faq_h">Küsimused</h2>
+      <div class="faq">
+        <details><summary data-i18n="q1">Kas videod tehakse tehisintellektiga?</summary><p data-i18n="a1">Jah. Kaadrid loon tehisintellekti abil ja kasutan teie fotosid, kui need saadate. Idee, stsenaarium, hääl ja monteerimine on minu töö. Seepärast valmib video päevadega ja maksab vähem kui võttegrupiga tehtud video. Instagram ja TikTok võivad videole lisada tehisintellekti märgise.</p></details>
+        <details><summary data-i18n="q2">Kas ma pean midagi filmima?</summary><p data-i18n="a2">Ei pea. Piisab, kui kirjutate, mida müüte ja kellele. Kui teil on häid fotosid, teevad need video veel rohkem teie omaks.</p></details>
+        <details><summary data-i18n="q3">Mis saab, kui video ei meeldi?</summary><p data-i18n="a3">Enne maksmist näete vesimärgiga eelvaadet. Üks parandusring on hinnas. Kui soovite rohkem muudatusi, lepime need eraldi kokku.</p></details>
+        <details><summary data-i18n="q4">Kas saan ka ainult ingliskeelse video?</summary><p data-i18n="a4">Ei. Iga video tuleb eesti keeles ja ingliskeelne versioon tuleb tasuta juurde. Nii vastab reklaam ka keeleseadusele.</p></details>
+        <details><summary data-i18n="q5">Kus videot kasutada saab?</summary><p data-i18n="a5">Instagramis, Facebookis, TikTokis ja Google'i ettevõtteprofiilis. Video on vertikaalne, nii et see täidab kogu telefoni ekraani.</p></details>
+        <p class="faq-note" data-i18n="faq_note">Midagi jäi segaseks? <a href="#kontakt">Küsige otse.</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="kontakt" aria-labelledby="h-ct">
+    <div class="wrap ct-in">
+      <h2 id="h-ct" data-i18n="ct_h">Kirjutage, mida müüte <span class="hl">ja kes ostab</span></h2>
+      <p class="ct-p" data-i18n="ct_p">Vastan 24 tunni jooksul ja tulen tagasi ideega.</p>
+      <p class="addr" id="addr">martin@reelik.ee</p>
+      <div class="ct-actions">
+        <a class="btn" id="mail" href="mailto:martin@reelik.ee?subject=Reklaamvideo" data-i18n="open_mail">Ava e-post</a>
+        <button type="button" class="btn-ghost" id="copy" data-i18n="copy">Kopeeri aadress</button>
+      </div>
+      <p class="toast" id="toast" role="status" aria-live="polite"></p>
+      <p class="tel"><span data-i18n="tel_l">Või helistage</span> <a href="tel:+3725245260">+372&nbsp;524&nbsp;5260</a></p>
+      <p class="sign" data-i18n="sign">Martin Kaldalu · Tallinn</p>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <span>© 2026 Reelik</span>
+    <a id="privacy-link" href="privaatsus.html" data-i18n="privacy">Privaatsus</a>
+    <span>martin@reelik.ee</span>
+    <span>+372 524 5260</span>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const EN = {
+    skip: "Skip to content",
+    nav_ad: "Sample",
+    nav_craft: "Process",
+    nav_prices: "Prices",
+    nav_cta: "Get in touch",
+    h1: "<span class=\"l1\"><span class=\"w\">Instagram</span> <span class=\"w\">wants video,</span></span> <span class=\"box\">your staff don’t</span>",
+    lede: "I make your business a short ad video without a single day of filming. Nobody has to step in front of a camera or leave the counter: you write a couple of sentences, I do the rest.",
+    cta_write: "Write to me",
+    cta_prices: "See prices",
+    from: "from <b>79 €</b>",
+    phone_label: "Sample ad for a made-up tyre hotel, in Estonian",
+    f1: "Ready in 3 working days",
+    f2: "Voice and subtitles included",
+    f3: "In Estonian and English",
+    f4: "Instagram, TikTok, Facebook",
+    f5: "Pay after the preview",
+    slop_h: "Tired of <span class=\"nw\">AI slop?</span>",
+    slop_a: "<span class=\"hl\">So am I.</span>",
+    slop_p: "Same-y faces, six fingers and text you can’t read. I do make the shots with AI, but any shot that looks like AI goes straight in the bin. Only what looks real makes it into your ad.",
+    ana_h: "How one ad is built",
+    ana_p: "The same sample ad, part by part. Pick any part on the timeline to watch it.",
+    tr_pic: "Video",
+    tr_txt: "Text",
+    tr_snd: "Audio",
+    b1_h: "Hook",
+    b1_l: "“This season’s biggest interior trend: the tyre!”",
+    b1_s: "The coffee table is a tyre",
+    b2_h: "The joke",
+    b2_l: "“A tyre spa in the bathroom. A nightstand that smells of winter.”",
+    b2_s: "Tyres in the bath and by the bed",
+    b3_h: "Peak",
+    b3_l: "“And in the hallway, a multifunctional dog bed.”",
+    b3_s: "The dog sleeps in a tyre",
+    b4_h: "Twist",
+    b4_l: "“Or… you just take your tyres to a tyre hotel.”",
+    b4_s: "The tyre hotel",
+    b5_h: "End card",
+    b5_l: "“Tyre hotel from 39 € a season”",
+    b5_s: "Business name, price and phone",
+    craft_h: "One video, lots of attempts",
+    craft_p: "This is the work that happens before a video reaches you.",
+    c1_h: "The hook comes first",
+    c1_p: "I write several openings and keep the one that stops a thumb in the first two seconds.",
+    c2_h: "Several models for every shot",
+    c2_p: "I try the same shot in different AI models, because one is better at light and another at movement.",
+    c3_h: "Still first, then motion",
+    c3_p: "I make several stills of each shot and pick the best. Only then does it start to move.",
+    c4_h: "I fix the mistakes",
+    c4_p: "I check every shot at full size. If anything is off, I make it again. No “maybe nobody will notice”.",
+    c5_h: "Then the edit",
+    c5_p: "I put the shots together and add voice-over, music and subtitles.",
+    how_h: "How it works",
+    who_you: "You",
+    who_me: "Me",
+    s1_h: "Tell me what you sell and to whom",
+    s1_p: "A couple of sentences is enough. I come back with an idea: what grabs attention in the first two seconds and what the video says. If it doesn’t fit, say “no, not like that” and I’ll think of a new one.",
+    s2_h: "I make the video",
+    s2_p: "Shots, voice, music and subtitles. Meanwhile you get on with your own work.",
+    s3_h: "Check the preview",
+    s3_p: "Within three working days you get a watermarked preview. One round of changes is included. When the video is done, you pay and get it without the watermark.",
+    pr_h: "Prices",
+    p1_h: "One video",
+    p1_sub: "a good first try",
+    p1_l1: "1 video, 15–25 seconds",
+    p1_l2: "Estonian and English versions",
+    p1_l3: "Ready in 3 working days",
+    p1_l4: "1 round of changes",
+    p2_h: "Monthly plan",
+    per_month: "a month",
+    p2_sub: "about 73 € per video",
+    p2_l1: "4 videos a month, one a week",
+    p2_l2: "Estonian and English versions",
+    p2_l3: "A simple posting plan",
+    p2_l4: "1 round of changes per video",
+    p3_h: "Campaign",
+    p3_sub: "about 61 € per video",
+    p3_l1: "8 videos a month",
+    p3_l2: "2 shorter cuts for Facebook and Instagram ads",
+    p3_l3: "Estonian and English versions",
+    p3_l4: "1 round of changes per video",
+    plan_cta: "Write to me",
+    inc_h: "Every video includes",
+    inc1_h: "Idea and script",
+    inc1_p: "Every video is built around one clear idea that we agree on first.",
+    inc2_h: "Estonian and English",
+    inc2_p: "The English version comes free, because not everyone scrolls in Estonian.",
+    inc3_h: "Voice-over and subtitles",
+    inc3_p: "Nobody turns the sound on in the bus, so the text is always on screen.",
+    inc4_h: "Vertical format",
+    inc4_p: "The video fills the whole phone screen and is ready to upload to Instagram, Facebook and TikTok.",
+    inc5_h: "Your logo and contact",
+    inc5_p: "The end card shows your name, logo and how to reach you.",
+    inc6_h: "Music and sound effects",
+    inc6_p: "I pick music and effects to suit your business.",
+    pr_note: "No VAT is added to these prices. Not sure which one fits? <a href=\"#kontakt\">Write to me and I’ll suggest one.</a>",
+    faq_h: "Questions",
+    q1: "Are the videos made with AI?",
+    a1: "Yes. I create the shots with AI and use your photos if you send them. The idea, script, voice-over and editing are my work. That is why a video takes days, not weeks, and costs less than one made with a film crew. Instagram and TikTok may add an AI label to the video.",
+    q2: "Do I need to film anything?",
+    a2: "No. Just write what you sell and to whom. If you have good photos, they make the video even more your own.",
+    q3: "What if I don’t like the video?",
+    a3: "You see a watermarked preview before you pay. One round of changes is included. If you want more changes, we agree on them separately.",
+    q4: "Can I get an English-only video?",
+    a4: "No. Every video comes in Estonian, and the English version is included for free. That way the ad also meets the Estonian Language Act.",
+    q5: "Where can I use the video?",
+    a5: "On Instagram, Facebook, TikTok and your Google Business Profile. The video is vertical, so it fills the whole phone screen.",
+    faq_note: "Something unclear? <a href=\"#kontakt\">Just ask.</a>",
+    ct_h: "Tell me what you sell <span class=\"hl\">and who buys it</span>",
+    ct_p: "I reply within 24 hours and come back with an idea.",
+    open_mail: "Open email",
+    copy: "Copy address",
+    tel_l: "Or call",
+    sign: "Martin Kaldalu · Tallinn",
+    privacy: "Privacy"
+  };
+  const MAIL = "martin@reelik.ee";
+  const TEXT = {
+    et: { subject: "Reklaamvideo", copied: "Aadress on kopeeritud.", manual: "Aadress on valitud. Kopeerige see käsitsi.", clip: "Näidisreklaami lõpp: rehvihotelli ladu", ad: "Näidisreklaam väljamõeldud rehvihotellile", tl: "Ajatelg", play: "Mängi", pause: "Peata", soundOn: "Heli sisse", soundOff: "Heli välja", privacy: "privaatsus.html" },
+    en: { subject: "Promo video", copied: "Address copied.", manual: "Address selected. Copy it manually.", clip: "End of the sample ad: the tyre hotel storeroom", ad: "Sample ad for a made-up tyre hotel", tl: "Timeline", play: "Play", pause: "Pause", soundOn: "Sound on", soundOff: "Sound off", privacy: "privaatsus.html#en" }
+  };
+  // The sample ad: where each part starts, and its captions (burned into the video) for the text track.
+  const DUR = 27.65;
+  const BEATS = [0,  5.53,  12.83,  19.2,  25.37];
+  const LINES = [
+    [0.14, 4.97, "Selle hooaja suurim sisustustrend… rehv!", "This season’s biggest interior trend… the tyre!"],
+    [5.52, 8.72, "Pesuruumis rehvispaa. Puhas luksus.", "A tyre spa in the bathroom. Pure luxury."],
+    [8.81, 11.87, "Magamistoas öökapp, mis lõhnab talve järele.", "In the bedroom, a nightstand that smells of winter."],
+    [12.7, 15.72, "Ja esikus multifunktsionaalne koeravoodi.", "And in the hallway, a multifunctional dog bed."],
+    [16.17, 17.47, "Koer on vaimustuses.", "The dog is thrilled."],
+    [18.17, 21.13, "Või… viid rehvid lihtsalt rehvihotelli.", "Or… you just take your tyres to a tyre hotel."],
+    [21.13, 25.35, "Rehvikoda hoiab su rehvid kuivas ja korterist väljas.", "Rehvikoda keeps your tyres dry and out of your flat."],
+    [25.45, 27.65, "Rehvihotell alates 39 € hooaeg", "Tyre hotel from 39 € a season"]
+  ];
+  const WAVE = [10,30,59,75,83,99,99,67,16,55,66,63,55,75,35,35,49,63,10,30,39,35,30,33,30,33,39,90,66,16,13,10,10,10,10,16,73,59,24,13,10,21,78,35,16,33,10,10,33,55,37,19,21,21,19,10,10,28,69,75,42,39,16,10,10,76,73,67,10,35,42,28,16,46,28,30,19,10,10,53,16,10,24,30,51,63,37,69,33,10,21,72,40,44,39,75,58,30,48,35,30,16,10,10,10,37,80,49,30,28,99,79,16,13,10,10,35,19,30,40,46,13,10,10,10,16,66,76,99,66,67,59,61,44,85,37,42,24,53,28,91,76,21,76,87,73,87,73,85,59,63,72,44,69,82,99,16,73,72,59,66,30,59,33,24,10,10,49,90,99,95,85,63,33,78,72,53,21,10,10];
+
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+  const reduce = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+  const nodes = $$("[data-i18n]");
+  const ET = {};
+  nodes.forEach(n => { ET[n.dataset.i18n] = n.innerHTML; });
+
+  const clip = $("#clip"), bar = $("#bar"), hbtn = $("#hero-btn"), toast = $("#toast");
+  const ad = $("#ad"), mbar = $("#m-bar"), tcNow = $("#tc-now");
+  const tl = $("#tl"), ph = $("#ph"), area = $(".tl-area"), cv = $("#wave");
+  const playBtn = $("#ad-play"), playT = $("#ad-play-t"), sndBtn = $("#ad-snd");
+  const beatBtns = $$(".beat"), clips = $$(".clip"), cues = $$(".cue");
+  let lang = "et";
+
+  /* Hero clip */
+  const heroUI = () => {
+    const on = !clip.paused;
+    hbtn.classList.toggle("playing", on);
+    hbtn.setAttribute("aria-label", on ? TEXT[lang].pause : TEXT[lang].play);
+  };
+
+  /* Sample ad on the timeline */
+  let cur = 0, lineIdx = -2, beatIdx = -2, wantPlay = false, autoDone = false;
+  const fmt = t => "00:" + String(Math.min(59, Math.max(0, Math.floor(t + 0.001)))).padStart(2, "0");
+  const beatAt = t => { let i = 0; for (let k = 0; k < BEATS.length; k++) if (t >= BEATS[k]) i = k; return i; };
+  const lineAt = t => LINES.findIndex(l => t >= l[0] && t < l[1]);
+  const plain = s => s.replace(/<[^>]+>/g, "");
+
+  const ctx = cv.getContext && cv.getContext("2d");
+  let waveW = 0, waveH = 0, lastPlayed = -1, colA = "#FF4436", colB = "#4A453E";
+  const drawWave = p => {
+    if (!ctx || !waveW) return;
+    const n = WAVE.length, played = Math.round(p * n);
+    if (played === lastPlayed) return;
+    lastPlayed = played;
+    ctx.clearRect(0, 0, waveW, waveH);
+    const bw = waveW / n, mid = waveH / 2;
+    for (let i = 0; i < n; i++) {
+      const h = Math.max(1, WAVE[i] / 99 * waveH * 0.9);
+      ctx.fillStyle = i < played ? colA : colB;
+      ctx.fillRect(i * bw + bw * 0.2, mid - h / 2, Math.max(1, bw * 0.6), h);
+    }
+  };
+  const sizeWave = () => {
+    if (!ctx) return;
+    const r = cv.getBoundingClientRect(), d = window.devicePixelRatio || 1;
+    if (!r.width) return;
+    cv.width = Math.round(r.width * d);
+    cv.height = Math.round(r.height * d);
+    waveW = cv.width; waveH = cv.height;
+    const cs = getComputedStyle(cv);
+    colA = cs.getPropertyValue("--wave-a").trim() || colA;
+    colB = cs.getPropertyValue("--wave-b").trim() || colB;
+    lastPlayed = -1;
+    drawWave(cur / DUR);
+  };
+
+  const render = t => {
+    cur = t;
+    const p = Math.min(1, Math.max(0, t / DUR));
+    ph.style.left = (p * 100) + "%";
+    mbar.style.transform = "scaleX(" + p + ")";
+    tcNow.textContent = fmt(t);
+    tl.setAttribute("aria-valuenow", t.toFixed(1));
+    tl.setAttribute("aria-valuetext", fmt(t));
+    const b = beatAt(t);
+    if (b !== beatIdx) {
+      beatIdx = b;
+      beatBtns.forEach((x, k) => { x.classList.toggle("on", k === b); if (k === b) x.setAttribute("aria-current", "true"); else x.removeAttribute("aria-current"); });
+      clips.forEach((x, k) => x.classList.toggle("on", k === b));
+    }
+    const li = lineAt(t);
+    if (li !== lineIdx) {
+      lineIdx = li;
+      cues.forEach((x, k) => x.classList.toggle("on", k === li));
+    }
+    drawWave(p);
+  };
+  const adUI = () => {
+    const on = !ad.paused;
+    playBtn.classList.toggle("playing", on);
+    playT.textContent = on ? TEXT[lang].pause : TEXT[lang].play;
+    const snd = ad.muted ? TEXT[lang].soundOn : TEXT[lang].soundOff;
+    sndBtn.classList.toggle("unmuted", !ad.muted);
+    sndBtn.setAttribute("aria-label", snd);
+    sndBtn.title = snd;
+  };
+  const textTrack = () => {
+    cues.forEach((x, k) => { x.textContent = plain(LINES[k][lang === "en" ? 3 : 2]); });
+    clips.forEach((x, k) => { const h = beatBtns[k] && $(".b-h", beatBtns[k]); $("span", x).textContent = h ? h.textContent : ""; });
+  };
+
+  const setLang = (next, remember) => {
+    lang = next === "en" ? "en" : "et";
+    nodes.forEach(n => {
+      const k = n.dataset.i18n;
+      n.innerHTML = lang === "en" && EN[k] != null ? EN[k] : ET[k];
+    });
+    document.documentElement.lang = lang;
+    $$(".lang button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
+    $("#mail").href = "mailto:" + MAIL + "?subject=" + encodeURIComponent(TEXT[lang].subject);
+    $("#privacy-link").href = TEXT[lang].privacy;
+    clip.setAttribute("aria-label", TEXT[lang].clip);
+    ad.setAttribute("aria-label", TEXT[lang].ad);
+    tl.setAttribute("aria-label", TEXT[lang].tl);
+    toast.textContent = "";
+    heroUI();
+    textTrack();
+    lineIdx = -2;
+    render(cur);
+    adUI();
+    if (remember) { try { localStorage.setItem("reelik-lang", lang); } catch (e) {} }
+  };
+
+  let start = "et";
+  try { const saved = localStorage.getItem("reelik-lang"); if (saved === "en" || saved === "et") start = saved; } catch (e) {}
+  const hash = (location.hash || "").slice(1).toLowerCase();
+  if (hash === "en" || hash === "et") start = hash;
+  setLang(start, false);
+  $$(".lang button").forEach(b => b.addEventListener("click", () => setLang(b.dataset.lang, true)));
+
+  $("#copy").addEventListener("click", () => {
+    const manual = () => {
+      const range = document.createRange();
+      range.selectNodeContents($("#addr"));
+      const sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(range);
+      toast.textContent = TEXT[lang].manual;
+    };
+    try {
+      navigator.clipboard.writeText(MAIL).then(() => { toast.textContent = TEXT[lang].copied; }, manual);
+    } catch (e) { manual(); }
+  });
+
+  /* Hero clip playback */
+  let heroWant = !reduce, raf = 0;
+  const tick = () => {
+    const d = clip.duration || 6.07;
+    bar.style.transform = "scaleX(" + Math.min(1, clip.currentTime / d) + ")";
+    raf = requestAnimationFrame(tick);
+  };
+  const heroPlay = () => { const p = clip.play(); if (p && p.catch) p.catch(() => { heroWant = false; heroUI(); }); };
+  clip.addEventListener("play", () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(tick); heroUI(); });
+  clip.addEventListener("pause", () => { cancelAnimationFrame(raf); heroUI(); });
+  hbtn.addEventListener("click", () => {
+    if (clip.paused) { heroWant = true; heroPlay(); } else { heroWant = false; clip.pause(); }
+  });
+  const heroSrc = $("source", clip);
+  if (heroSrc) heroSrc.addEventListener("error", () => { heroWant = false; hbtn.hidden = true; });
+
+  /* Sample ad playback */
+  const adPlay = () => {
+    const p = ad.play();
+    if (p && p.catch) p.catch(() => { wantPlay = false; adUI(); });
+  };
+  let pending = null;
+  const seek = t => {
+    t = Math.min(DUR - 0.05, Math.max(0, t));
+    if (ad.readyState < 1) {
+      if (pending === null) { ad.preload = "auto"; try { ad.load(); } catch (e) {} }
+      pending = t;
+    } else {
+      try { ad.currentTime = t; } catch (e) {}
+    }
+    render(t);
+  };
+  ad.addEventListener("loadedmetadata", () => {
+    if (pending === null) return;
+    try { ad.currentTime = pending; } catch (e) {}
+    pending = null;
+  });
+  let raf2 = 0;
+  const loop = () => { render(ad.currentTime); raf2 = requestAnimationFrame(loop); };
+  ad.addEventListener("play", () => { cancelAnimationFrame(raf2); raf2 = requestAnimationFrame(loop); adUI(); });
+  ad.addEventListener("pause", () => { cancelAnimationFrame(raf2); adUI(); });
+  ad.addEventListener("seeked", () => { if (ad.paused) render(ad.currentTime); });
+  ad.addEventListener("volumechange", adUI);
+  const src = $("source", ad);
+  if (src) src.addEventListener("error", () => { wantPlay = false; $("#editor").classList.add("noplay"); });
+
+  const toggleAd = () => {
+    if (ad.paused) { wantPlay = true; adPlay(); } else { wantPlay = false; ad.pause(); }
+  };
+  playBtn.addEventListener("click", toggleAd);
+  $("#monitor").addEventListener("click", toggleAd);
+  sndBtn.addEventListener("click", () => {
+    ad.muted = !ad.muted;
+    if (!ad.muted && ad.paused) { wantPlay = true; adPlay(); }
+    adUI();
+  });
+  beatBtns.forEach((b, k) => b.addEventListener("click", () => {
+    autoDone = true;
+    seek(BEATS[k] + 0.02);
+    wantPlay = true;
+    adPlay();
+  }));
+
+  let scrub = false;
+  const seekX = x => {
+    const r = area.getBoundingClientRect();
+    if (r.width) seek((x - r.left) / r.width * DUR);
+  };
+  tl.addEventListener("pointerdown", e => {
+    if (e.button !== 0) return;
+    autoDone = true;
+    scrub = true;
+    try { tl.setPointerCapture(e.pointerId); } catch (err) {}
+    seekX(e.clientX);
+  });
+  tl.addEventListener("pointermove", e => { if (scrub) seekX(e.clientX); });
+  const endScrub = () => { scrub = false; };
+  tl.addEventListener("pointerup", endScrub);
+  tl.addEventListener("pointercancel", endScrub);
+  tl.addEventListener("keydown", e => {
+    const steps = { ArrowLeft: -1, ArrowDown: -1, ArrowRight: 1, ArrowUp: 1, PageDown: -5, PageUp: 5 };
+    let t = null;
+    if (e.key in steps) t = cur + steps[e.key];
+    else if (e.key === "Home") t = 0;
+    else if (e.key === "End") t = BEATS[BEATS.length - 1];
+    if (t === null) return;
+    e.preventDefault();
+    autoDone = true;
+    seek(t);
+  });
+
+  sizeWave();
+  if ("ResizeObserver" in window) new ResizeObserver(sizeWave).observe(cv);
+  else window.addEventListener("resize", sizeWave);
+
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { if (heroWant) heroPlay(); }
+        else if (!clip.paused) clip.pause();
+      });
+    }, { threshold: 0.25 }).observe(clip);
+    new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          if (!autoDone && !reduce) { autoDone = true; seek(0); wantPlay = true; }
+          if (wantPlay && ad.paused) adPlay();
+        } else if (!ad.paused) ad.pause();
+      });
+    }, { threshold: 0.35 }).observe($("#editor"));
+  } else if (heroWant) {
+    heroPlay();
+  }
+})();
+</script>
+
+</body></html>
