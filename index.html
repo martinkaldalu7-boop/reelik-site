@@ -266,6 +266,17 @@ h3{font-weight:500;font-size:var(--fs-h3);line-height:1.15;letter-spacing:-.01em
 .foot-in{display:flex;flex-wrap:wrap;gap:8px 28px;font-size:.95rem;color:var(--ink-2)}
 .foot a{color:var(--ink-2);text-underline-offset:.2em}
 .foot a:hover{color:var(--ink)}
+.foot-btn{appearance:none;border:0;background:none;padding:0;font:inherit;color:var(--ink-2);text-decoration:underline;text-underline-offset:.2em;cursor:pointer}
+.foot-btn:hover{color:var(--ink)}
+
+/* Consent card for Microsoft Clarity: small and quiet, bottom left, both answers the same size and weight. */
+.ck{position:fixed;z-index:30;left:max(12px,env(safe-area-inset-left,0px));right:max(12px,env(safe-area-inset-right,0px));bottom:calc(12px + env(safe-area-inset-bottom,0px));display:grid;gap:12px;padding:14px 16px 16px;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:12px;box-shadow:0 8px 28px rgba(21,19,15,.12);font-size:.95rem;line-height:1.45}
+@media (min-width:700px){.ck{right:auto;left:max(24px,env(safe-area-inset-left,0px));bottom:calc(24px + env(safe-area-inset-bottom,0px));max-width:380px}}
+.ck-t{color:var(--ink-2)}
+.ck-t a{color:var(--ink);text-underline-offset:.2em}
+.ck-b{display:flex;gap:8px}
+.ck-b button{appearance:none;flex:1 1 0;min-height:42px;padding:0 14px;border-radius:8px;border:1px solid var(--ink);background:transparent;color:var(--ink);font-family:var(--f-body);font-size:.95rem;font-weight:600;line-height:1;cursor:pointer}
+.ck-b button:hover{background:var(--ink);color:var(--snow)}
 
 @media (prefers-reduced-motion: reduce){
   html{scroll-behavior:auto}
@@ -480,8 +491,17 @@ h3{font-weight:500;font-size:var(--fs-h3);line-height:1.15;letter-spacing:-.01em
     <a id="privacy-link" href="privaatsus.html" data-i18n="privacy">Privaatsus</a>
     <span>martin@reelik.ee</span>
     <span>+372 524 5260</span>
+    <button type="button" class="foot-btn" id="ck-open" data-i18n="ck_open">Küpsised</button>
   </div>
 </footer>
+
+<div class="ck" id="ck" role="region" aria-label="Küpsised" hidden>
+  <p class="ck-t" data-i18n="ck_t">Kas võin Microsoft Clarityga vaadata, kuidas lehte kasutatakse (klikid, kerimine)? See kasutab küpsiseid. <a href="privaatsus.html#clarity">Loe lähemalt</a></p>
+  <div class="ck-b">
+    <button type="button" id="ck-yes" data-i18n="ck_yes">Luban</button>
+    <button type="button" id="ck-no" data-i18n="ck_no">Ei luba</button>
+  </div>
+</div>
 
 <script>
 (() => {
@@ -576,12 +596,16 @@ h3{font-weight:500;font-size:var(--fs-h3);line-height:1.15;letter-spacing:-.01em
     copy: "Copy address",
     tel_l: "Or call",
     sign: "Martin · Tallinn",
-    privacy: "Privacy"
+    privacy: "Privacy",
+    ck_open: "Cookies",
+    ck_t: "May I use Microsoft Clarity to see how the page is used (clicks, scrolling)? It uses cookies. <a href=\"privaatsus.html#clarity-en\">Read more</a>",
+    ck_yes: "Allow",
+    ck_no: "Don’t allow"
   };
   const MAIL = "martin@reelik.ee";
   const TEXT = {
-    et: { subject: "Reklaamvideo", copied: "Aadress on kopeeritud.", manual: "Aadress on valitud. Kopeerige see käsitsi.", reel: "Reeliku näidisreklaam: kohvik, pitseria, küünesalong, lillepood, restoran, jäätisekohvik, juuksur ja kondiitriäri", play: "Mängi", pause: "Peata", soundOn: "Heli sisse", soundOff: "Heli välja", privacy: "privaatsus.html" },
-    en: { subject: "Promo video", copied: "Address copied.", manual: "Address selected. Copy it manually.", reel: "Reelik sample ad: café, pizzeria, nail salon, florist, restaurant, gelato shop, hair salon and cake shop", play: "Play", pause: "Pause", soundOn: "Sound on", soundOff: "Sound off", privacy: "privaatsus.html#en" }
+    et: { subject: "Reklaamvideo", copied: "Aadress on kopeeritud.", manual: "Aadress on valitud. Kopeerige see käsitsi.", reel: "Reeliku näidisreklaam: kohvik, pitseria, küünesalong, lillepood, restoran, jäätisekohvik, juuksur ja kondiitriäri", play: "Mängi", pause: "Peata", soundOn: "Heli sisse", soundOff: "Heli välja", privacy: "privaatsus.html", ck: "Küpsised" },
+    en: { subject: "Promo video", copied: "Address copied.", manual: "Address selected. Copy it manually.", reel: "Reelik sample ad: café, pizzeria, nail salon, florist, restaurant, gelato shop, hair salon and cake shop", play: "Play", pause: "Pause", soundOn: "Sound on", soundOff: "Sound off", privacy: "privaatsus.html#en", ck: "Cookies" }
   };
 
   const $ = (s, r = document) => r.querySelector(s);
@@ -592,7 +616,7 @@ h3{font-weight:500;font-size:var(--fs-h3);line-height:1.15;letter-spacing:-.01em
   const ET = {};
   nodes.forEach(n => { ET[n.dataset.i18n] = n.innerHTML; });
 
-  const reel = $("#reel"), rbox = $("#reel-box"), sBtn = $("#r-snd"), sT = $("#r-snd-t"), pBtn = $("#r-pp"), big = $("#r-big"), toast = $("#toast");
+  const reel = $("#reel"), rbox = $("#reel-box"), sBtn = $("#r-snd"), sT = $("#r-snd-t"), pBtn = $("#r-pp"), big = $("#r-big"), toast = $("#toast"), ck = $("#ck");
   let lang = "et";
 
   /* The reel starts muted on its own (the only way browsers allow autoplay). One tap on "Heli sisse" or on the
@@ -619,6 +643,7 @@ h3{font-weight:500;font-size:var(--fs-h3);line-height:1.15;letter-spacing:-.01em
     $("#privacy-link").href = TEXT[lang].privacy;
     reel.setAttribute("aria-label", TEXT[lang].reel);
     big.setAttribute("aria-label", TEXT[lang].play);
+    ck.setAttribute("aria-label", TEXT[lang].ck);
     toast.textContent = "";
     reelUI();
     if (remember) { try { localStorage.setItem("reelik-lang", lang); } catch (e) {} }
@@ -684,6 +709,51 @@ h3{font-weight:500;font-size:var(--fs-h3);line-height:1.15;letter-spacing:-.01em
     }), { threshold: 0.2 }).observe(rbox);
   } else {
     reelPlay();
+  }
+
+  /* Microsoft Clarity (visit recordings and heatmaps) loads only after the visitor presses "Luban". The answer stays in their
+     own browser; "Küpsised" in the footer asks again. Ad storage stays denied, so Clarity is used for analytics only. */
+  const CK = "reelik-clarity";
+  let clarityOn = false;
+  const clarityLoad = () => {
+    if (clarityOn) return;
+    clarityOn = true;
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "zax7p0fssb");
+    window.clarity("consentv2", { ad_Storage: "denied", analytics_Storage: "granted" });
+  };
+  const clarityStop = () => {
+    if (window.clarity) window.clarity("consentv2", { ad_Storage: "denied", analytics_Storage: "denied" });
+    const host = location.hostname.replace(/^www\./, "");
+    ["_clck", "_clsk"].forEach(n => {
+      document.cookie = n + "=; Max-Age=0; path=/";
+      document.cookie = n + "=; Max-Age=0; path=/; domain=" + host;
+    });
+  };
+  let ckDone = false;
+  const ckAnswer = v => {
+    ckDone = true;
+    try { localStorage.setItem(CK, v); } catch (e) {}
+    ck.hidden = true;
+    if (v === "yes") clarityLoad(); else clarityStop();
+  };
+  $("#ck-yes").addEventListener("click", () => ckAnswer("yes"));
+  $("#ck-no").addEventListener("click", () => ckAnswer("no"));
+  $("#ck-open").addEventListener("click", () => { ck.hidden = false; $("#ck-yes").focus(); });
+  let ckSaved = null;
+  try { ckSaved = localStorage.getItem(CK); } catch (e) {}
+  if (ckSaved === "yes") clarityLoad();
+  else if (ckSaved !== "no") {
+    // On a phone the reel fills the first screen and the card would cover its sound button, so there it waits for the first scroll.
+    const ckShow = () => { if (!ckDone) ck.hidden = false; };
+    if ((window.matchMedia && matchMedia("(min-width:700px)").matches) || window.scrollY > 80) ckShow();
+    else {
+      const ckScroll = () => { if (window.scrollY > 80) { window.removeEventListener("scroll", ckScroll); ckShow(); } };
+      window.addEventListener("scroll", ckScroll, { passive: true });
+    }
   }
 
 })();
