@@ -273,7 +273,9 @@ h3{font-weight:500;font-size:var(--fs-h3);line-height:1.15;letter-spacing:-.01em
 .ck{position:fixed;z-index:30;left:max(12px,env(safe-area-inset-left,0px));right:max(12px,env(safe-area-inset-right,0px));bottom:calc(12px + env(safe-area-inset-bottom,0px));display:grid;gap:12px;padding:14px 16px 16px;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:12px;box-shadow:0 8px 28px rgba(21,19,15,.12);font-size:.95rem;line-height:1.45}
 @media (min-width:700px){.ck{right:auto;left:max(24px,env(safe-area-inset-left,0px));bottom:calc(24px + env(safe-area-inset-bottom,0px));max-width:380px}}
 .ck-t{color:var(--ink-2)}
-.ck-t a{color:var(--ink);text-underline-offset:.2em}
+.ck-t a,.ck-x a{color:var(--ink);text-underline-offset:.2em}
+.ck-more{appearance:none;border:0;background:none;padding:0;font:inherit;color:var(--ink);text-decoration:underline;text-underline-offset:.2em;cursor:pointer}
+.ck-x{color:var(--ink-2)}
 .ck-b{display:flex;gap:8px}
 .ck-b button{appearance:none;flex:1 1 0;min-height:42px;padding:0 14px;border-radius:8px;border:1px solid var(--ink);background:transparent;color:var(--ink);font-family:var(--f-body);font-size:.95rem;font-weight:600;line-height:1;cursor:pointer}
 .ck-b button:hover{background:var(--ink);color:var(--snow)}
@@ -496,7 +498,8 @@ h3{font-weight:500;font-size:var(--fs-h3);line-height:1.15;letter-spacing:-.01em
 </footer>
 
 <div class="ck" id="ck" role="region" aria-label="Küpsised" hidden>
-  <p class="ck-t" data-i18n="ck_t">Kas võin Microsoft Clarityga vaadata, kuidas lehte kasutatakse (klikid, kerimine)? See kasutab küpsiseid. <a href="privaatsus.html#clarity">Loe lähemalt</a></p>
+  <p class="ck-t"><span data-i18n="ck_t">Kas lubate küpsiseid? Need aitavad mul näha, kuidas lehte kasutatakse.</span> <button type="button" class="ck-more" id="ck-more" aria-expanded="false" aria-controls="ck-x" data-i18n="ck_more">Loe lähemalt</button></p>
+  <p class="ck-x" id="ck-x" data-i18n="ck_x" hidden>Kasutan Microsoft Clarityt. See näitab mulle, kuhu lehel klikitakse ja kui kaugele keritakse. Teie nime see ei näe ja reklaami jaoks andmeid ei kasutata. Täpsemalt <a href="privaatsus.html#clarity">privaatsuslehel</a>.</p>
   <div class="ck-b">
     <button type="button" id="ck-yes" data-i18n="ck_yes">Luban</button>
     <button type="button" id="ck-no" data-i18n="ck_no">Ei luba</button>
@@ -598,7 +601,9 @@ h3{font-weight:500;font-size:var(--fs-h3);line-height:1.15;letter-spacing:-.01em
     sign: "Martin · Tallinn",
     privacy: "Privacy",
     ck_open: "Cookies",
-    ck_t: "May I use Microsoft Clarity to see how the page is used (clicks, scrolling)? It uses cookies. <a href=\"privaatsus.html#clarity-en\">Read more</a>",
+    ck_t: "Do you allow cookies? They help me see how the page is used.",
+    ck_more: "Read more",
+    ck_x: "I use Microsoft Clarity. It shows me where people click on the page and how far they scroll. It doesn’t see your name, and nothing is used for ads. Details on the <a href=\"privaatsus.html#clarity-en\">privacy page</a>.",
     ck_yes: "Allow",
     ck_no: "Don’t allow"
   };
@@ -740,6 +745,11 @@ h3{font-weight:500;font-size:var(--fs-h3);line-height:1.15;letter-spacing:-.01em
     ck.hidden = true;
     if (v === "yes") clarityLoad(); else clarityStop();
   };
+  $("#ck-more").addEventListener("click", e => {
+    e.currentTarget.hidden = true;
+    e.currentTarget.setAttribute("aria-expanded", "true");
+    $("#ck-x").hidden = false;
+  });
   $("#ck-yes").addEventListener("click", () => ckAnswer("yes"));
   $("#ck-no").addEventListener("click", () => ckAnswer("no"));
   $("#ck-open").addEventListener("click", () => { ck.hidden = false; $("#ck-yes").focus(); });
